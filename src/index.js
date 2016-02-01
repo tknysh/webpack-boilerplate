@@ -1,2 +1,4 @@
-require('./scss/style.scss');
-document.write(require('./const/common.js'));
+import { WELCOME_MESSAGE } from './const/common';
+import './scss/style.scss';
+
+document.write(WELCOME_MESSAGE);
