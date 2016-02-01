@@ -7,6 +7,13 @@ module.exports = {
     filename: 'index.js'
   },
   module: {
+    preLoaders: [
+      {
+        test: /\.js$/,
+        loader: 'eslint-loader',
+        exclude: '/(node_modules)/'
+      }
+    ],
     loaders: [
       {
         test: /\.css$/,
@@ -24,12 +31,9 @@ module.exports = {
         ]
       },
       {
-        test: /\.(jsx|js)?$/,
-        exclude: /(node_modules|bower_components)/,
-        loader: 'babel',
-        query: {
-          presets: ['react', 'es2015']
-        }
+        test: /\.js?$/,
+        exclude: /(node_modules)/,
+        loader: 'babel'
       }
     ]
   }

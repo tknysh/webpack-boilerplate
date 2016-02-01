@@ -1,4 +1,4 @@
-Webpack boilerplate
+Webpack boilerplate (eslint)
 
 Loaders:
 - sass-loader
